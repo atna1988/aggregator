@@ -1,8 +1,8 @@
 name: Collect
 于:
-  # executed everyday at 05:30
+  # executed everyday at 06:30
   schedule:
-    - cron: "30 5 * * *"
+    - cron: "30 6 * * *"
   workflow_dispatch:
 
 concurrency:
