@@ -1,9 +1,9 @@
 name: Collect
-于:
-  # executed everyday at 05:30
+on:
+  # 修改为每天 00:00 (UTC 时间) 运行
   schedule:
-    - cron: "30 5 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *"  # 核心修改：把最后一位的 1（周一）改成 *（每天）
+  workflow_dispatch:  # 保留手动触发功能
 
 concurrency:
   group: ${{ github.repository }}
